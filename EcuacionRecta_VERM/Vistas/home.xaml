@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EcuacionRecta_VERM.Vistas.home"
+             Title="Formas de la Ecuación de la recta">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#CDFCF6">
+            <StackLayout HorizontalOptions="Center"
+                         Margin="15"
+                         Spacing="5">
+                <Image Source="formaordenada.png"/>
+                <Button Text="Forma Ordenada al Origen"
+                        CornerRadius="10"
+                        FontSize="Medium"
+                        TextTransform="None"
+                        FontAttributes="Bold"
+                        BackgroundColor="#98A8F8"
+                        TextColor="White"
+                        x:Name="ordenada"
+                        Clicked="ordenada_Clicked" />
+                <Image Source="formapuntopendiente.png"
+                       Margin="0, 20, 0, 0" />
+                <Button Text="Forma Punto - Pendiente"
+                        CornerRadius="10"
+                        FontSize="Medium"
+                        TextTransform="None"
+                        FontAttributes="Bold"
+                        BackgroundColor="#98A8F8"
+                        TextColor="White"
+                        x:Name="punto"
+                        Clicked="punto_Clicked" />
+                <StackLayout Margin="120,20, 120, 0">
+                    <Button Text="Terminar"
+                            TextTransform="None"
+                            BackgroundColor="#98A8F8"
+                            CornerRadius="10"
+                            FontSize="Medium"
+                            TextColor="White"
+                            FontAttributes="Bold"
+                            x:Name="terminar"
+                            Clicked="terminar_Clicked" />
+                </StackLayout>
+            </StackLayout>
+                <StackLayout VerticalOptions="EndAndExpand"
+                             Margin="5">
+                <Label Text="Verónica Ruíz Manzo &#10; ES1822035300 &#10; Programación móvil  &#10; 31/10/2022"
+                           FontSize="Small"
+                           FontAttributes="Bold"
+                           HorizontalTextAlignment="Center" />
+                </StackLayout>
+            </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

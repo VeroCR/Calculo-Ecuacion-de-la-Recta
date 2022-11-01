@@ -1,12 +1,117 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="EcuacionRecta_VERM.Vistas.PuntoPendiente">
+             x:Class="EcuacionRecta_VERM.Vistas.PuntoPendiente"
+             Title="Punto - Pendiente" >
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <StackLayout BackgroundColor="#CDFCF6">
+            <StackLayout VerticalOptions="Center"
+                         Spacing="7">
+                <Image Source="formapuntopendiente.png"
+                       Margin="0, 20, 0, 0" />
+                <Label Text="Coordenadas del punto A"
+                       FontSize="Medium"
+                       FontAttributes="Bold"
+                       HorizontalTextAlignment="Center" />
+                <StackLayout Orientation="Horizontal"
+                             HorizontalOptions="Center">
+                    <Label Text="( "
+                           FontSize="30"
+                           FontAttributes="Bold"
+                           HorizontalTextAlignment="Center"
+                           VerticalTextAlignment="Center" />
+                    <Frame CornerRadius="15"
+                           HeightRequest="35">
+                        <Entry Keyboard="Numeric"
+                               Placeholder=" x"
+                               TextColor="Black"
+                               FontSize="Small"
+                               x:Name="txtx" />
+                    </Frame>
+                    <Label Text=" , "
+                           FontSize="30"
+                           FontAttributes="Bold"
+                           HorizontalTextAlignment="Center"
+                           VerticalTextAlignment="Center" />
+                    <Frame CornerRadius="15"
+                           HeightRequest="35">
+                        <Entry Keyboard="Numeric"
+                               Placeholder=" y"
+                               TextColor="Black"
+                               FontSize="Small"
+                               x:Name="txty" />
+                    </Frame>
+                    <Label Text=")"
+                           FontSize="30"
+                           FontAttributes="Bold"
+                           HorizontalTextAlignment="Center"
+                           VerticalTextAlignment="Center" />
+                </StackLayout>
+                <StackLayout Orientation="Horizontal"
+                             HorizontalOptions="Center">
+                    <Label Text="Valor de m = "
+                           FontSize="Medium"
+                           FontAttributes="Bold"
+                           HorizontalTextAlignment="Center"
+                           VerticalTextAlignment="Center" />
+                    <Frame CornerRadius="15"
+                           HeightRequest="35">
+                        <Entry Keyboard="Numeric"
+                               Placeholder="m"
+                               TextColor="Black"
+                               FontSize="Small"
+                               x:Name="txtm" />
+                    </Frame>
+                </StackLayout>
+                <StackLayout Margin="120,10">
+                    <Button Text="Calcular"
+                            TextTransform="None"
+                            BackgroundColor="#98A8F8"
+                            CornerRadius="10"
+                            FontSize="Medium"
+                            TextColor="White"
+                            FontAttributes="Bold"
+                            x:Name="btnCalcular"
+                            Clicked="btnCalcular_Clicked" />
+                </StackLayout>
+                <StackLayout HorizontalOptions="Center"
+                             Orientation="Horizontal">
+                    <Label Text="Resultado:"
+                           FontSize="Medium"
+                           FontAttributes="Bold" />
+                    <Label Text="y = mx + b"
+                           FontSize="Medium"
+                           x:Name="lblPuntoPendiente" />
+                </StackLayout>
+                <StackLayout HorizontalOptions="Center"
+                             Orientation="Horizontal">
+                    <Label Text="Forma General"
+                           FontSize="Medium"
+                           FontAttributes="Bold"
+                           HorizontalTextAlignment="Center" />
+                    <Label Text="Ax + By + C = 0"
+                           FontSize="Medium"
+                           x:Name="lblFormaGeneral" />
+                </StackLayout>
+                <StackLayout Margin="120,10">
+                    <Button Text="Regresar"
+                            TextTransform="None"
+                            BackgroundColor="#98A8F8"
+                            CornerRadius="10"
+                            FontSize="Medium"
+                            TextColor="White"
+                            FontAttributes="Bold"
+                            x:Name="regresar"
+                            Clicked="regresar_Clicked" />
+                </StackLayout>
+            </StackLayout>
+            <StackLayout VerticalOptions="EndAndExpand"
+                         Margin="15">
+                <Label Text="Verónica Ruíz Manzo &#10; ES1822035300 &#10; Programación móvil  &#10; 31/10/2022"
+                       FontSize="Small"
+                       FontAttributes="Bold"
+                       HorizontalTextAlignment="Center" />
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

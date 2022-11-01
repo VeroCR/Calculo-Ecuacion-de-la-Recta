@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EcuacionRecta_VERM.Vistas;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -10,7 +11,7 @@ namespace EcuacionRecta_VERM
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new NavigationPage(new home());
         }
 
         protected override void OnStart()
